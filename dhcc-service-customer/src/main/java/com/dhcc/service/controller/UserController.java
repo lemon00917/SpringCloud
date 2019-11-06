@@ -1,5 +1,6 @@
 package com.dhcc.service.controller;
 
+import com.dhcc.service.Client.UserClient;
 import com.dhcc.service.pojo.User;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -21,21 +22,24 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("customer/user")
-@DefaultProperties(defaultFallback = "fallbackMethod") //定义全局的熔断器
+//@DefaultProperties(defaultFallback = "fallbackMethod") //定义全局的熔断器
 public class UserController {
-    @Autowired
-    private RestTemplate restTemplate;
+//    @Autowired
+//    private RestTemplate restTemplate;
     @Autowired
     private DiscoveryClient discoveryClient;
+
+    @Autowired
+    private UserClient userClient;
 
     @GetMapping
     @ResponseBody
     @HystrixCommand  //声明熔断方法
-    public String queryUserById(@RequestParam("id")Long id){
-        if (id==1){
-            throw new RuntimeException();
+    public User queryUserById(@RequestParam("id")Long id){
+       /* if (id==1){
+            throw new RuntimeException("太忙了");
 
-        }
+        }*/
         // 根据服务名称，获取服务实例。有可能是集群，所以是service实例集合
         //List<ServiceInstance> instances = discoveryClient.getInstances("service-provider");
         // 因为只有一个Service-provider。所以获取第一个实例
@@ -44,10 +48,11 @@ public class UserController {
         //String baseUrl = "http://" + instance.getHost() + ":" + instance.getPort() + "/user/" + id;
        // return this.restTemplate.getForObject(baseUrl, String.class);
 
-        return this.restTemplate.getForObject("http://service-provider/user/"+id,String.class);
+        //return this.restTemplate.getForObject("http://service-provider/user/"+id,String.class);
+        return this.userClient.queryUserById(id);
 
     }
-    public String fallbackMethod(){
+   /* public String fallbackMethod(){
         return "请求繁忙，请稍后再试！";
-    }
+    }*/
 }
