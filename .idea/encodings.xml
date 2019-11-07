@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/dhcc-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dhcc-service-customer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dhcc-service-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dhcc-zuul" charset="UTF-8" />
   </component>
 </project>

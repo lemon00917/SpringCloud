@@ -6,9 +6,10 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/dhcc-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/dhcc-service-provider/pom.xml" />
         <option value="$PROJECT_DIR$/dhcc-service-customer/pom.xml" />
+        <option value="$PROJECT_DIR$/dhcc-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/dhcc-eureka/pom.xml" />
       </list>
     </option>
   </component>

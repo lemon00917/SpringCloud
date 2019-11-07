@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/dhcc-eureka/dhcc-eureka.iml" filepath="$PROJECT_DIR$/dhcc-eureka/dhcc-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/dhcc-service-customer/dhcc-service-customer.iml" filepath="$PROJECT_DIR$/dhcc-service-customer/dhcc-service-customer.iml" />
       <module fileurl="file://$PROJECT_DIR$/dhcc-service-provider/dhcc-service-provider.iml" filepath="$PROJECT_DIR$/dhcc-service-provider/dhcc-service-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dhcc-zuul/dhcc-zuul.iml" filepath="$PROJECT_DIR$/dhcc-zuul/dhcc-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lpf-demo.iml" filepath="$PROJECT_DIR$/.idea/lpf-demo.iml" />
     </modules>
   </component>

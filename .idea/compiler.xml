@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="dhcc-service-customer" />
+        <module name="dhcc-zuul" />
         <module name="dhcc-eureka" />
         <module name="dhcc-service-provider" />
       </profile>
@@ -15,6 +16,7 @@
       <module name="dhcc-eureka" target="1.8" />
       <module name="dhcc-service-customer" target="1.8" />
       <module name="dhcc-service-provider" target="1.8" />
+      <module name="dhcc-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -22,6 +24,7 @@
       <module name="dhcc-eureka" options="-parameters" />
       <module name="dhcc-service-customer" options="-parameters" />
       <module name="dhcc-service-provider" options="-parameters" />
+      <module name="dhcc-zuul" options="-parameters" />
     </option>
   </component>
 </project>
